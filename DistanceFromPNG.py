@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import argparse
-import cv2
 
 def main_process():
     parser = argparse.ArgumentParser()
@@ -11,17 +10,18 @@ def main_process():
                         help='''List of Pictures'''
                        )
     parser.add_argument('-f', '--focal-length',
-                        type = float,
+                        type=float,
                         nargs='+',
-                        dest = 'focals',
-                        help='''List of relative focal lentgth for each picture'''
+                        dest='focals',
+                        help='''List of relative focal length for each picture'''
                        )
     parser.add_argument('-d', '--distance',
-                        type = float,
+                        type=float,
                         nargs='+',
-                        dest = 'distances',
+                        dest='distances',
                         help='''List of relative distance from each picture and
                         the first one.'''
                        )
+
 if __name__=='__main__':
     main_process()
